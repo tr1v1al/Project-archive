@@ -1,0 +1,143 @@
+@font-face {
+            font-family: "SegoeUI";
+            src: url("fonts/SegoeUI/SegoeUI.eot");
+            src: url("fonts/SegoeUI/SegoeUI.eot?#iefix")format("embedded-opentype"),
+            url("fonts/SegoeUI/SegoeUI.woff") format("woff"),
+            url("fonts/SegoeUI/SegoeUI.ttf") format("truetype");
+            font-style: normal;
+            font-weight: normal;
+}
+
+@font-face {
+            font-family: "SegoeUI-Bold";
+            src: url("fonts/SegoeUI/SegoeUI-Bold.eot");
+            src: url("fonts/SegoeUI/SegoeUI-Bold.eot?#iefix")format("embedded-opentype"),
+            url("fonts/SegoeUI/SegoeUI-Bold.woff") format("woff"),
+            url("fonts/SegoeUI/SegoeUI-Bold.ttf") format("truetype");
+            font-style: normal;
+            font-weight: normal;
+}
+
+@font-face {
+            font-family: "SegoeUI-Italic";
+            src: url("fonts/SegoeUI/SegoeUI-Italic.eot");
+            src: url("fonts/SegoeUI/SegoeUI-Italic.eot?#iefix")format("embedded-opentype"),
+            url("fonts/SegoeUI/SegoeUI-Italic.woff") format("woff"),
+            url("fonts/SegoeUI/SegoeUI-Italic.ttf") format("truetype");
+            font-style: normal;
+            font-weight: normal;
+}
+
+@font-face {
+            font-family: "SegoeUI-SemiBold";
+            src: url("fonts/SegoeUI/SegoeUI-SemiBold.eot");
+            src: url("fonts/SegoeUI/SegoeUI-SemiBold.eot?#iefix")format("embedded-opentype"),
+            url("fonts/SegoeUI/SegoeUI-SemiBold.woff") format("woff"),
+            url("fonts/SegoeUI/SegoeUI-SemiBold.ttf") format("truetype");
+            font-style: normal;
+            font-weight: normal;
+}
+
+@font-face {
+            font-family: "SegoeUI-BoldItalic";
+            src: url("fonts/SegoeUI/SegoeUI-BoldItalic.eot");
+            src: url("fonts/SegoeUI/SegoeUI-BoldItalic.eot?#iefix")format("embedded-opentype"),
+            url("fonts/SegoeUI/SegoeUI-BoldItalic.woff") format("woff"),
+            url("fonts/SegoeUI/SegoeUI-BoldItalic.ttf") format("truetype");
+            font-style: normal;
+            font-weight: normal;
+}
+
+@font-face {
+            font-family: "SegoeUI-Light";
+            src: url("fonts/SegoeUI/SegoeUI-Light.eot");
+            src: url("fonts/SegoeUI/SegoeUI-Light.eot?#iefix")format("embedded-opentype"),
+            url("fonts/SegoeUI/SegoeUI-Light.woff") format("woff"),
+            url("fonts/SegoeUI/SegoeUI-Light.ttf") format("truetype");
+            font-style: normal;
+            font-weight: normal;
+}
+
+.login-box {
+	padding: 15px;
+	width: 323px; /*293 170*/
+	height: 200px;
+    background-color: #F9F9F9;
+    border: 1px solid #ccc;
+	margin: 260px auto;
+}
+
+.login-box form {
+	position: relative;
+	width: 100%;
+	height: 120px;	
+}
+
+.login-box input[type="password"] {
+	position: relative;
+    display: block;
+    margin: 10px auto 0px auto;
+    font-size: 15px;
+
+    outline: none;
+    border: 1px solid #ccc;
+    background: #FFF;
+    padding: 11.2px 20px;
+}
+#incpwd {
+    border: 1px solid red;
+}
+
+#incpwd::-webkit-input-placeholder {
+    color: red;
+}
+
+.login-box input[type="password"]::-webkit-input-placeholder {
+    color: #888;
+    font-family: SegoeUI, Arial, serif;
+}
+
+.login-box input[type="password"]:-moz-placeholder {
+    color: #888;
+    font-family: SegoeUI, Arial, serif;
+}
+
+.login-box input[type="password"]::-moz-placeholder {
+    color: #888;
+    font-family: SegoeUI, Arial, serif;
+}
+
+.login-box input[type="password"]:-ms-input-placeholder {
+    color: #888;
+    font-family: SegoeUI, Arial, serif;
+}
+
+.login-box input[type="submit"] {
+    display: block;
+    margin: 40px auto 0px auto;
+    font-size: 15px; 
+    color: white;
+    width: 100px;
+    height: 40px;
+    border: none;
+    transition-duration: 0.4s;
+    background-color: #4CAF50;   
+	position: relative;
+    outline: none;
+    font-family: SegoeUI-Bold, Arial, serif;
+}
+
+.login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #49D967;
+}
+
+.login-box p {
+    text-align: center;
+    margin:0;
+    padding: 0 0 20px;
+    font-size: 30px;
+    font-family: SegoeUI-Italic, Arial, serif;
+    font-weight: 600;
+    color: #777;
+}

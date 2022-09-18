@@ -1,0 +1,624 @@
+
+/*---------------Fixes the white-space-to-the-right bug-------------*/
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f2f2f2;
+}
+
+.content-wrapper {
+	margin-top: 170px;
+}
+
+/*--------------Filter boxes--------------*/
+
+
+.filter-form {
+	margin-top: 160px;
+	width: 710px;
+	height: 70px;
+	display: block;
+	margin: 0 auto 0 auto;
+	position: relative;
+	/*
+	z-index: 5;
+	position: fixed;
+	top: 132px;
+	*/
+}
+
+.filter-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.multiselect {
+	position: absolute;
+	width: 210px;
+	height: 30px;
+	margin-top: 20px; 
+}
+
+.grade {
+	top: 0px;
+	left: 0px;
+}
+
+.faculty {
+	top: 0px;
+	left: 250px;
+}
+
+.school-year {
+	top: 0px;
+	right: 0px;
+}
+
+.selectBox {
+	position: relative;
+}
+
+.selectBox select {
+	width: 100%;
+	font-family: SegoeUI, Arial, serif;
+	font-size: 15px;
+	padding: 5px 10px;
+}
+
+.overSelect {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.checkboxes {
+	display: none;
+	position: relative;
+	border: 1px #dadada solid;
+	background-color: white;
+	z-index: 1;
+}
+
+.checkboxes label {
+	display: block;
+	padding: 5px 10px;
+	font-size: 15px;
+	font-family: SegoeUI, Arial, serif;
+}
+
+.checkboxes label:hover {
+	background-color: #E6E6E6;
+}
+
+.filter-input-block {
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	border-top: 1px solid #ccc;	
+	position: relative;
+}
+
+
+.checkboxes input[type = 'checkbox'] {
+
+}
+
+.checkboxes input[type = 'submit'] {
+	width: 90%;
+	height: 40px;
+	border: none;
+	color: white;
+	background-color: #4CAF50;
+	font-family: SegoeUI, Arial, serif;
+	font-size: 15px;
+	border-radius: 4px;
+	position: absolute;
+	display: block;
+	top: 10px;
+	left: 10px;
+	transition-duration: 0.4s;
+
+}
+
+.checkboxes input[type = 'submit']:hover {
+    background-color: #49D967;
+}
+
+
+
+/*--------------------------------Sample select box--------------------------------*/
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  /*z-index: 1;*/
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/*____________________Trigger button_____________________*/
+
+
+.trigger-button-block {
+	margin-top: 30px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+}
+
+.trigger-button {
+	margin-top: 30px;
+	margin: 0 auto;
+	position: relative;
+	background-color: #49D967;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+}	
+
+.trigger-button:hover {
+	background-color: #49B14E;
+}
+
+/*__________________Filter box styling______________________*/
+/*
+.filter-box {
+	display: none;
+	z-index: 1;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4);
+}
+
+.filter-box-content {
+	position: relative;
+	background-color: #d9ffcc;
+	margin: 6% auto 10% auto;
+	width: 250px;
+	height: 300px;
+	padding-bottom: 30px;
+	border-radius: 5px;
+}
+
+*/
+
+/*_________________________________New code_______________________________-*/
+
+/*
+.download-title-block {
+	width: 100%;
+	height: 30px;
+	text-align: center;
+}
+*/
+
+.download-links-block {
+	width: 100%;
+	height: 50px;
+}
+
+
+.download-links-block a{
+	text-decoration: none;
+}
+
+.download-links-block button{
+	width: 50px;
+	height: 50px;
+	background-color: #4CAF50;
+	border: none;
+	outline: none;
+	padding-top: 5px;
+	display: inline-block;
+}
+
+.download-links-block img{
+	width: 40px;
+	height: 40px;	
+}
+
+
+
+
+.download-ttpp-block {
+	width: 100%;
+	height: 50px;
+}
+
+.download-ttpp-block button{
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border: 2px solid #4CAF50;
+	border-style: dashed;
+	border-radius: 4px; 
+	transition-duration: 0.4s;
+}
+
+.download-ttpp-block button:hover{
+	background-color: #f2f2f2;
+	cursor: pointer;
+}
+
+#tbutton {
+	position: absolute;
+	top: 0px;
+	left: 50px;
+}
+
+#pbutton {
+	position: absolute;
+	top: 0px;
+	right: 50px;
+}
+
+.download-ttpp-block img{
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	display: block;
+	margin: auto;
+	width: 40px;
+	height: 40px;
+}
+
+.download-all-block {
+	position: relative;
+
+	width: 100%;
+	height: 50px;
+	margin-top: 20px;
+}
+
+.download-all-block button{
+	position: absolute;
+	font-size: 15px;
+	font-family: SegoeUI-Bold, Arial, serif;
+	color: white;
+	top: 0px;
+	left: 50px;
+	width: 140px;
+	height: 50px;
+	border: none;
+	transition-duration: 0.4s;
+	background-color: #4CAF50;
+}
+
+.download-all-block button:hover{
+	background-color: #49D967;
+	cursor: pointer;
+}
+
+.downloads-counter {
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	bottom: 10px;
+}
+
+.downloads-counter p {
+	margin: 0px;
+	font-size: 13px;
+	text-align: center;
+	font-family: SegoeUI, Arial, serif;
+}
+
+
+/*______________________Project box________________________*/
+
+.project-box {
+	position: relative;
+	margin: 60px auto 50px auto;
+	width: 646px;
+	height: 400px;
+	background-color: white;
+	border: 1px solid #ccc;
+}
+
+
+.image-display-block {
+	position: absolute;
+	width: 210px;
+	height: 210px;
+	padding: 15px; 
+}
+
+.avatar {
+	width: 210px; /*246px*/
+	height: 210px;
+	border-radius: 5px;
+}
+
+.edit {
+	width: 32px; 
+	height: 32px;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 15px;
+	right: 10px;
+}
+
+
+.text-display-block {
+	padding-top: 15px;
+	position: absolute;
+	width: 62%;
+	height: 100%;
+	top: 0px;
+	right: 0px;
+	font-size: 15px;
+	font-family: SegoeUI, Arial, serif;
+}
+
+.other-display-block {
+	position: absolute;
+	width: 240px;
+	height: 160px;
+	bottom: 0px;
+}
+
+/*248px in height for text*/
+
+.text-info-wrapper {
+	width: 90%;
+	height: 250px;
+}
+
+.text-info-block {
+	width: 100%;
+	margin-left: 30px;
+	overflow-wrap: break-word;
+	height: 20px; 
+	margin-bottom: 4px;
+}
+
+.big-text-info-block {
+	width: 100%;
+	margin-left: 30px;
+	overflow-wrap: break-word;
+	height: auto;
+	max-height: 60px;
+	margin-bottom: 4px;
+}
+
+.bighalf-text-info-block {
+	width: calc(100%-10px);
+	float: left;
+}
+
+.smallhalf-text-info-block {
+	width: 65px;
+	margin-left: 30px;
+	float: left;
+}
+
+/*border: 1px solid black;*/
+
+/*the rest, 152px, for description*/
+.description-info-wrapper {
+	width: 340px;
+	height: 80px;
+	word-wrap: break-word;
+	position: relative;
+	margin-top: 50px;
+}
+
+
+.description-info-block {
+	width: calc(100%);
+	height: 100%;
+	margin-left: 30px;
+	overflow: hidden;	
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+}
+
+/*Styling tooltip*/
+
+
+
+.tooltip {
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  width: 340px;
+  height: 80px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 340px;
+  background-color: #5cd65c;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #5cd65c transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+/*___________________Results counter_________________________*/
+
+.result-counter {
+	text-align: center;
+	font-family: SegoeUI-Italic, Arial, serif;
+	margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styling download button */
+
+/* Download text & powerpoint */
+/*
+.download-ttpp-block {
+	width: 100%;
+	height: 30%;
+	position: relative;
+}
+
+.download-ttpp-block a{
+	text-decoration: none;
+}
+
+.download-ttpp-block button{
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	position: relative;
+	background-color: #49D967;
+    border: none;
+    color: white;
+    padding: 6px 5px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 4px;	
+}
+
+.download-ttpp-block button:hover {
+    background-color: #49B14E;
+}
+
+.download-tt-block {
+	position: relative;
+	display: inline-block;
+	width: 49%;
+}
+
+.download-pp-block {
+	position: relative;
+	display: inline-block;
+	width: 49%;
+}
+
+
+
+.download-all-button-block {
+	position: relative;
+	width: 100%;
+	height: 30%;
+}
+
+.download-all-button-block a{
+	text-decoration: none;
+}
+
+.download-button {
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	position: relative;
+	background-color: #49D967;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.download-button:hover {
+    background-color: #49B14E;
+}
+*/

@@ -1,0 +1,738 @@
+@font-face {
+			font-family: "SegoeUI";
+			src: url("fonts/SegoeUI/SegoeUI.eot");
+			src: url("fonts/SegoeUI/SegoeUI.eot?#iefix")format("embedded-opentype"),
+			url("fonts/SegoeUI/SegoeUI.woff") format("woff"),
+			url("fonts/SegoeUI/SegoeUI.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+}
+
+@font-face {
+			font-family: "SegoeUI-Bold";
+			src: url("fonts/SegoeUI/SegoeUI-Bold.eot");
+			src: url("fonts/SegoeUI/SegoeUI-Bold.eot?#iefix")format("embedded-opentype"),
+			url("fonts/SegoeUI/SegoeUI-Bold.woff") format("woff"),
+			url("fonts/SegoeUI/SegoeUI-Bold.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+}
+
+@font-face {
+			font-family: "SegoeUI-Italic";
+			src: url("fonts/SegoeUI/SegoeUI-Italic.eot");
+			src: url("fonts/SegoeUI/SegoeUI-Italic.eot?#iefix")format("embedded-opentype"),
+			url("fonts/SegoeUI/SegoeUI-Italic.woff") format("woff"),
+			url("fonts/SegoeUI/SegoeUI-Italic.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+}
+
+@font-face {
+			font-family: "SegoeUI-SemiBold";
+			src: url("fonts/SegoeUI/SegoeUI-SemiBold.eot");
+			src: url("fonts/SegoeUI/SegoeUI-SemiBold.eot?#iefix")format("embedded-opentype"),
+			url("fonts/SegoeUI/SegoeUI-SemiBold.woff") format("woff"),
+			url("fonts/SegoeUI/SegoeUI-SemiBold.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+}
+
+@font-face {
+			font-family: "SegoeUI-BoldItalic";
+			src: url("fonts/SegoeUI/SegoeUI-BoldItalic.eot");
+			src: url("fonts/SegoeUI/SegoeUI-BoldItalic.eot?#iefix")format("embedded-opentype"),
+			url("fonts/SegoeUI/SegoeUI-BoldItalic.woff") format("woff"),
+			url("fonts/SegoeUI/SegoeUI-BoldItalic.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+}
+
+@font-face {
+			font-family: "SegoeUI-Light";
+			src: url("fonts/SegoeUI/SegoeUI-Light.eot");
+			src: url("fonts/SegoeUI/SegoeUI-Light.eot?#iefix")format("embedded-opentype"),
+			url("fonts/SegoeUI/SegoeUI-Light.woff") format("woff"),
+			url("fonts/SegoeUI/SegoeUI-Light.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+}
+/*
+body, html {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: initial;
+}
+*/
+.logo-header {
+	width: 100%;
+	/*margin: 0;*/
+	position: fixed;
+	top: 0px; /*0px*/
+	z-index: 2;
+	height: 76px;
+	background-color: white;
+}
+
+.logo-header img{
+
+	margin-top: 13px;
+	width: 409px;
+	height: 53px;
+}
+
+.utility-header {
+	z-index: 2;
+    margin: 0;
+    background-color: #4CAF50;
+    height: 56px;
+    position: fixed;
+    top: 76px; /*76px*/
+    width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.utility-header p{
+	margin: 0;
+}
+
+
+.left-block {
+	/*width: 320px;*/
+	width: 32%; 
+	float: left;
+	height: 100%;
+	display: inline-block;
+	float: left;
+}
+
+.right-block {
+
+	/*width: 30%;*/
+	width: calc(32% + 50px); /*-80px*/
+	display: inline-block;
+	height: 100%;
+	float: right;
+	
+	font-family: SegoeUI-Light, Arial, serif;
+	font-weight: 600;
+	letter-spacing: 4px;
+}
+
+@media all and (max-width: 710px) { /*580px*/
+	.left-block {
+		display: none;
+	}
+
+	.right-block {
+
+		/*width: 30%;*/
+		width: 350px; /*220px*/
+		display: inline-block;
+		height: 100%;
+		float: right;		
+		font-family: SegoeUI-Light, Arial, serif;
+		font-weight: 600;
+		letter-spacing: 4px;
+	}
+}
+
+@media all and (max-width: 953px) and (min-width: 710px){ /*max-width: 938px*/
+	.left-block {
+		/*width: 320px;*/
+		width: 320px; 
+		float: left;
+		height: 100%;
+		display: inline-block;
+		float: left;
+	}
+
+	.right-block {
+
+		/*width: 30%;*/
+		width: 350px; /*220px*/
+		display: inline-block;
+		height: 100%;
+		float: right;		
+		font-family: SegoeUI-Light, Arial, serif;
+		font-weight: 600;
+		letter-spacing: 4px;
+	}
+}
+
+.header-logout-block {
+	display: inline-block;
+	float: left;
+	height: 100%;
+	width: 90px;
+	/*
+	margin-right: 200px;*/
+	transition-duration: 0.4s;
+}
+
+.header-upload-block {
+	display: inline-block;
+	float: left;
+	height: 100%;
+	width: 130px;
+	transition-duration: 0.4s;	
+}
+
+.header-filter-block {
+	display: inline-block;
+	float: left;
+	height: 100%;
+	width: 130px;
+	transition-duration: 0.4s;		
+}
+
+.header-logout-title {
+	text-align: center;
+	line-height: 56px;
+	color: #f1f1f1;
+	position: relative;
+	font-size: 17px;
+	height: 100%;
+	width: 100%;
+}
+
+.header-logout-title:hover {
+	color: black;
+	cursor: pointer;
+}
+
+.header-logout-block:hover { 
+	background-color: white;
+}
+
+.header-upload-block:hover { 
+	background-color: white;
+}
+
+.header-filter-block:hover { 
+	background-color: white;
+}
+
+.search-container{
+	position: relative;
+	height: 100%;
+	width: 300px; /*300*/
+	display: block;
+	float: right;
+	/*margin-left: 200px;*/
+}
+
+.search-container a{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 12px;
+	right: 5px;	
+}
+
+input#search-bar{
+  margin: 6px auto;
+  width: 258px;/*258*/
+  height: 40px;
+  padding: 0 20px;
+  font-size: 15px;
+  font-family: SegoeUI, Arial, serif;
+  border: 1px solid #D0CFCE;
+  outline: none;
+  &:focus{
+    border: 1px solid #008ABF;
+    transition: 0.35s ease;
+    color: #008ABF;
+    &::-webkit-input-placeholder{
+      transition: opacity 0.45s ease; 
+  	  opacity: 0;
+  	  font-family: SegoeUI, Arial, serif;
+     }
+    &::-moz-placeholder {
+      transition: opacity 0.45s ease; 
+  	  opacity: 0;
+  	  font-family: SegoeUI, Arial, serif;
+     }
+    &:-ms-placeholder {
+     transition: opacity 0.45s ease; 
+  	 opacity: 0;
+  	 font-family: SegoeUI, Arial, serif;
+     }    
+   }
+ }
+
+.search-icon{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 0px;
+	right: 0px;
+
+}
+
+
+/*__________________Filter box styling______________________*/
+
+
+#filter-box-wrapper {
+	display: none;
+	z-index: 3;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4);
+}
+
+
+#filter-box-content {
+	position: relative;
+	background-color: #F9F9F9;
+	margin: 13% auto 10% auto;
+	width: 800px; /*800px*/
+	height: 205px;
+	padding-bottom: 30px;
+}
+
+#reset-block {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 70px;
+	text-align: center;
+}
+
+#reset-block button {
+	position: relative;
+	margin-top: 10px;
+	width: 150px;
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+	-webkit-transition: background 0.3s ease-in-out;
+	-moz-transition: background 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;   
+}
+
+#reset-block button:hover {
+	background-color: #49D967;
+}
+/*__________________Upload box styling______________________*/
+
+.upload-box {
+	/*Invisible by default*/
+	display: none;
+	/*Stack order greater than the main page's*/
+	z-index: 3;
+	/*Positioned relative to browser window, will resize*/
+	position: fixed;
+	/*Positioning and sizing*/
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	/*Will add a scrollbar if content is not fitting*/
+	overflow: auto;
+	/*Said color will change the color outside the box itself*/
+	background-color: rgba(0,0,0,0.4);
+}
+
+
+
+
+
+
+/*------------------Upload box: form content--------------------*/
+
+.upload-box-content {
+	position: relative;
+	background-color: #F9F9F9;
+	/*Sets top-bottom margin and right-left margin to auto*/
+	margin: 6% auto 10% auto;
+	width: 890px; /*800px*/
+	height: 475px;
+	/*width: 40%;*/
+	/*Add some blank space to the bottom*/
+	padding-bottom: 30px;
+}
+
+/*Upload box: closing cross*/
+
+.close {
+	/*Positioned relative to ancestor, the header-block*/
+	position: absolute;
+	/*Positioning at the upper right corner*/
+	right: 20px;
+	top: 5px;
+	color: black;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover,.close:focus {
+	color: red;
+	/*Specifies cursor shape when pointing*/
+	cursor: pointer;
+}
+
+/*Upload box popup animation*/
+
+.popup-animation {
+	animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+	from {transform: scale(0);}
+	to {transform: scale(1);}
+}
+
+/*______________Blocks within popup box___________________*/
+
+.header-block {
+	position: relative;
+	height: 80px;
+}
+
+.header-block h3 {
+	display: inline-block;
+	margin-top: 25px;
+	margin-left: 25px;
+	margin-bottom: 0px;
+	text-align: center;
+	font-size: 30px;
+	font-family: SegoeUI-Italic, Arial, serif;
+	font-weight: 600;
+	color: #777;
+}
+
+.upload-block {
+	position: relative;
+	/*width: 38%;
+	height: 62%;*/
+	width: 307px; /*307*/
+	display: inline-block;
+	float: left;
+	height: 320px;
+	margin-left: 25px;
+}
+
+.upload-block p {
+	margin: 0;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.text-block {
+	position: relative;
+	/*width: 62%;
+	height: 100%;*/
+	height: 320px;
+	width: 493px;
+	display: inline-block;
+	float: right;
+	margin-right: 25px;
+	/*
+	top: 40px;
+	right: 0px;*/
+}
+
+.submit-block {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 80px;
+	text-align: center;
+}
+
+/*All inputs*/
+
+.big-input {
+	width: 451px; /*493px - padding*/
+	/*margin: 0 auto 13px;*/
+	font-size: 15px;
+	border: none;
+	outline: none;
+	border: 1px solid #ccc;
+	background: #FFF;
+
+	padding: 11.2px 20px;	
+	margin-bottom: 15px;
+}
+
+/*Smaller inputs, like submit_date*/
+
+.small-input {
+	width: 145px;
+	/*margin: 0px 36px 13px 0px;*/
+	font-size: 15px;
+	border: none;
+	outline: none;
+	border: 1px solid #ccc;
+	background: #FFF;
+	padding: 11.2px 20px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+.grade-small-input {
+	width: 40px;
+	/*margin: 0px 36px 13px 0px;*/
+	font-size: 15px;
+	border: none;
+	outline: none;
+	border: 1px solid #ccc;
+	background: #FFF;
+	padding: 11.2px 20px;
+	float: right;
+	margin-bottom: 15px;
+}
+
+.upload-block select {
+	border: 1px solid #ccc;
+	font-size: 15px;
+	padding: 10px 20px;
+    outline: none;
+    width: 309px;
+    color: #888;
+    font-size: 15px;
+    font-family: SegoeUI, Arial, serif;
+    /*background-color: rgb(232, 240, 250);*/
+    margin: 0px 40px 13px 0px;
+}
+
+
+
+.text-block textarea{  /*.text-block textarea*/
+	width: 453px;
+	margin: 0 auto 13px;
+	font-size: 15px;
+	height: 70px;
+	outline: none;
+	border: 1px solid #ccc;
+	padding: 10px 20px;
+	background: #FFF;
+	font-family: SegoeUI, Arial, serif;
+}
+
+
+.text-block input:focus,
+.text-block select:focus,
+.text-block textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+
+.submit-block button {
+	position: relative;
+	margin-top: 30px;
+	width: 420px;
+	background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+	-webkit-transition: background 0.3s ease-in-out;
+	-moz-transition: background 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;    
+}
+
+.upload-box-content button:hover {
+    background-color: #49D967;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+  font-size: 15px;
+  font-family: SegoeUI, Arial, serif;
+}
+
+:-moz-placeholder {
+  color: #888;
+  font-size: 15px;
+  font-family: SegoeUI, Arial, serif;
+}
+
+::-moz-placeholder {
+  color: #888;
+  font-size: 15px;
+  font-family: SegoeUI, Arial, serif;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+  font-size: 15px;
+  font-family: SegoeUI, Arial, serif;
+}
+
+
+/*---------------File inputs--------------*/
+
+.inputfile-6 + label span,
+.inputfile-6 + label span:after,
+.inputfile-6 + label span:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.inputfile + label span,
+.inputfile + label span:after,
+.inputfile + label span:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.inputfile + label strong,
+.inputfile + label strong:after,
+.inputfile + label strong:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    /*max-width: 80%;*/
+    width: 267px;    /*307-padding*/     /* --------Box width----- */
+    font-size: 15px;
+    /* 20px */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    margin-bottom: 11px;
+    font-family: SegoeUI, Arial, serif;
+    /* 10px 20px */
+}
+
+.inputfile span {
+	margin: 0px;
+
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+
+ /*Style 1*/
+
+.inputfile-1 + label {
+    color: #FFF;				/*#888*/
+    background-color: #81ea92; 	/*#FFF #bfbfbf*/
+    padding: 10px 20px;
+    border: 1px solid #5cd65c;		/*#ccc*/
+	-webkit-transition: background 0.3s ease-in-out;
+	-moz-transition: background 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;  
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+	color: #888;
+    background-color: #8cff9f;   /*#DCDCDC*/
+    border: 1px solid #e6e6e6;
+}
+
+/*Warning about the size and the number of files for uploading*/
+
+#upload-box-warning {
+	position: relative;
+	margin-top: 6px;
+	color: red;
+	font-size: 14px;
+}
+
+
+/*------------------Edit box--------------------*/
+
+#edit-box-form {
+	height: 550px;
+}
+
+
+#edit-upload-block {
+	height: 400px;
+}
+
+#edit-text-block {
+	height: 400px;
+}
+
+
+
+
+
+#edit_description {
+	width: 267px;
+	height: 90px;
+	font-size: 15px;
+	border: 1px solid #ccc;
+	padding: 10px 20px;	
+	background: #FFF;
+	font-family: SegoeUI, Arial, serif;
+}
+
+#edit_description:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+#edit_type {
+	width: 195px;
+}
+
+#edit_status {
+	width: 195px;
+	margin-right: 0px;
+}
+
+#edit_log {
+	height: 90px;
+}
+
+
+#delete-button {
+	width: 309px;
+	background-color: #ff3333;
+	float: left;
+	margin-left: 25px;
+	margin-top: 12px;
+}
+
+#save-button {
+	float: right;
+	margin-right: 23px;
+	width: 493px; /*493*/
+	margin-top: 12px;
+}
+
+#delete-button:hover {
+	background-color: #cc0000;
+}
+
+
+#edit-box-warning {
+	position: relative;
+	margin-top: 6px;
+	color: red;
+	font-size: 14px;
+	margin-bottom: 0px;
+}
